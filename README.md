@@ -1,5 +1,4 @@
 # AI Translator
-<br>
 
 ## Overview
 This AI based application lets you pick a source language (with Automatic Detection avaiable), choose a target language, paste or type text, and get a single clean translaction. It includes a "Swap Languages" control (disabled when the source is *Automatic Detection*), basic validation, and a simple result area.
