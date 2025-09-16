@@ -5,6 +5,14 @@
 This AI based application lets you pick a source language (with Automatic Detection avaiable), choose a target language, paste or type text, and get a single clean translaction. It includes a "Swap Languages" control (disabled when the source is *Automatic Detection*), basic validation, and a simple result area.
 <br>
 
+## Demo
+Here's a quick demo of the translator in action:
+<br>
+
+![Translator Demo](assets/Translator_demo.gif)
+<br>
+<br>
+
 ## Model
 - **Provider**: Groq (via langchain_groq)
 - **Model**: *Gemma2-9b-It*
@@ -62,14 +70,6 @@ Optionally, you may set other variables for your development workflow, but they�
 3. Click *“Translate”* to get the translation.
 4. Use *“Swap Languages”* to invert source/target (if source isn’t Automatic Detection).
 5. Click *“Clear”* to reset the input area.
-<br>
-
-## Demo
-Here's a quick demo of the translator in action:
-<br>
-
-![Translator Demo](assets/Translator_demo.gif)
-<br>
 <br>
 
 ## Limitations & Notes
