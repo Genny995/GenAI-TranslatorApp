@@ -11,7 +11,6 @@ Here's a quick demo of the translator in action:
 
 ![Translator Demo](assets/Translator_demo.gif)
 <br>
-<br>
 
 ## Model
 - **Provider**: Groq (via langchain_groq)
@@ -77,7 +76,6 @@ Optionally, you may set other variables for your development workflow, but theyâ
 - Translations may vary for very long or domain-specific texts.
 - The app does not persist any data; the input text is sent to Groq for processing.
 - Network errors or invalid API keys will be surfaced via Streamlit error messages.
-<br>
 <br>
 
 ### Additional Material
