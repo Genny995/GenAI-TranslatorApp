@@ -4,13 +4,11 @@
 ## Overview
 This AI based application lets you pick a source language (with Automatic Detection avaiable), choose a target language, paste or type text, and get a single clean translaction. It includes a "Swap Languages" control (disabled when the source is *Automatic Detection*), basic validation, and a simple result area.
 <br>
-<br>
 
 ## Model
 - **Provider**: Groq (via langchain_groq)
 - **Model**: *Gemma2-9b-It*
 - **Rationale**: fast, quality general-purpose model suitable for short and medium-length translation tasks; served by Groq’s low-latency infrastructure.
-<br>
 <br>
 
 ## Tech Stack
@@ -19,7 +17,6 @@ This AI based application lets you pick a source language (with Automatic Detect
 - langchain_groq (Groq LLM wrapper)
 - python-dotenv (environment variables)
 <br>
-<br>
 
 ## How It Works (Architecture)
 - Prompt templating with LangChain (*ChatPromptTemplate*) using variables: `origin_language`, `destination_language`, `text`.
@@ -27,14 +24,12 @@ This AI based application lets you pick a source language (with Automatic Detect
 - Output parsing with *StrOutputParser* to return a plain string.
 - A chain composes: prompt → model → parser.
 - Streamlit UI provides language selectors, text input, Translate/Clear buttons, optional Swap Languages, and loading/error states.
-<br>
 
 ### Core Prompt (exact)
 - **System message**:
 “*Translate the following text from {`origin_language`} to {`destination_language`} with just one version.*”
 - **User message**:
 “{`text`}”
-<br>
 
 ### Features
 - Source language select with “Automatic Detection”.
@@ -43,17 +38,14 @@ This AI based application lets you pick a source language (with Automatic Detect
 - Text area for input and a dedicated output area for the translated text.
 - Validation: checks for missing API key and empty input.
 - Inline spinner and success/error messages.
-<br>
 
 ### Supported Languages (current)
 Automatic Detection (source only), Italian, English, Spanish, French, German, Chinese, Japanese, Dutch, Russian, Portuguese, Swedish.
 **Note**: When using Automatic Detection, the app relies on the model’s implicit language detection (no explicit detection step is enforced by the prompt).
-<br>
 
 ### Environment Variables
 - `GROQ_API_KEY` — your Groq API key (required).
 Optionally, you may set other variables for your development workflow, but they’re not required by the app.
-<br>
 <br>
 
 ## Local Setup & Run
@@ -63,7 +55,6 @@ Optionally, you may set other variables for your development workflow, but they�
 4. Run the app with: streamlit run app.py
 5. Open the local URL provided by Streamlit in your browser.
 <br>
-<br>
 
 ## Usage
 1. Select the source language (or *Automatic Detection*) and the target language.
@@ -71,6 +62,13 @@ Optionally, you may set other variables for your development workflow, but they�
 3. Click *“Translate”* to get the translation.
 4. Use *“Swap Languages”* to invert source/target (if source isn’t Automatic Detection).
 5. Click *“Clear”* to reset the input area.
+<br>
+
+## Demo
+Here's a quick demo of the translator in action:
+<br>
+
+![Translator Demo](assets/Translator_demo.gif)
 <br>
 <br>
 
@@ -84,15 +82,6 @@ Optionally, you may set other variables for your development workflow, but they�
 
 ### Additional Material
 For a step-by-step explaination and development notes, see the [Jupyter Notebook](notebooks/AI_translator.ipynb)
-<br>
-<br>
-
-## Demo
-Here's a quick demo of the translator in action:
-<br>
-
-![Translator Demo](assets/Translator_demo.gif)
-<br>
 <br>
 
 ## Author
